@@ -7,19 +7,20 @@ import db from './firebase';
 function App() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState('');
+
   useEffect(() => {
     db.collection('todos').onSnapshot(snapshot => {
       setTodos(snapshot.docs.map(doc => doc.data().todo))
     })
-    
-      }, []);
-
-
+  }, []);
 
   const addTodo = (event) => {
     event.preventDefault();
-    console.log('alien');
-    setTodos([...todos, input]);
+
+    db.collection('todos').add({
+      todo: input
+})
+
     setInput('');
   }
   return (
