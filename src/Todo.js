@@ -8,7 +8,7 @@ function Todo(props) {
       <ListItem>
         <ListItemAvatar>
         </ListItemAvatar>
-        <ListItemText primary={props.todo.todo} secondary="Dummy Deadline :alarm_clock:" />
+        <ListItemText primary={props.todo.todo} secondary="Dummy Deadline :⏰" />
       </ListItem>
       <Button onClick={event => db.collection('todos').doc(props.todo.id).delete()}>DELETE POST</Button>
     </List>

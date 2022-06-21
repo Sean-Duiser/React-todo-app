@@ -22,10 +22,10 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>Simple React Todo Organizer:blue_book:</h1>
+      <h1>Simple React Todo Organizer 📘</h1>
       <form>
         <FormControl>
-          <InputLabel>:white_check_mark: Write a Todo</InputLabel>
+          <InputLabel>✔️ Write a Todo</InputLabel>
           <Input value={input} onChange={event => setInput(event.target.value)} />
         </FormControl>
         <Button disabled={!input} type="submit" onClick={addTodo} variant="contained" color="primary">Add Todo
